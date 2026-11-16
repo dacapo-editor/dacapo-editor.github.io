@@ -20,13 +20,28 @@ npm run preview   # serve the production build
 ```
 src/content/docs/          pages (Markdown / MDX); the folder structure is the URL
   index.mdx                home page
-  download.mdx             download and build instructions
+  download.mdx             downloads (direct links resolved from the GitHub API) and system requirements
+  support.mdx              how to support the project
+  news/                    news posts (starlight-blog)
   guide/                   user guide
   project/                 roadmap, contributing, credits
-src/assets/logo.png        logo (the app icon)
-src/styles/custom.css      accent colors
-astro.config.mjs           site title, sidebar, links
+  es/                      Spanish pages; anything missing falls back to English
+src/components/            home page and download components
+src/assets/screens/        app screenshots, light and dark (2880×1800)
+public/media/typing.webp   animation of notes being typed and dragged
+src/styles/custom.css      accent colors, theme-specific images
+astro.config.mjs           site title, languages, sidebar, news
 ```
+
+### Updating the screenshots
+
+They come from the app repository's `dev/app.html` (the real interface with a fake backend), served over HTTP, with headless Chrome:
+
+```bash
+chrome --headless=new --hide-scrollbars --window-size=1440,900 --force-device-scale-factor=2 --screenshot=app-light.png "http://localhost:8765/dev/app.html?update=none&demo&theme=light"
+```
+
+Use `theme=dark` for the dark one. Feature images on the home page are crops of these files (`crop` in pixels).
 
 To add a page, create a `.md` file under `src/content/docs/` and add its slug to the `sidebar` in `astro.config.mjs`.
 

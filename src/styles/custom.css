@@ -19,6 +19,11 @@
 	box-shadow: 0 1.5rem 3rem -1rem rgb(0 0 0 / 0.35);
 }
 
+/* Less room between the home hero and the screenshot below it. */
+[data-has-hero] .hero {
+	padding-block-end: 1rem;
+}
+
 /* Images that exist in a light and a dark version (see Screenshot.astro). */
 :root[data-theme='light'] .only-dark,
 :root[data-theme='dark'] .only-light {

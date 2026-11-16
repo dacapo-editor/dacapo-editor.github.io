@@ -6,10 +6,12 @@ import Screenshot from './Screenshot.astro';
 interface Props {
 	title: string;
 	alt: string;
-	crop: { x: number; y: number; w: number; h: number };
+	crop?: { x: number; y: number; w: number; h: number };
+	/** An animation in public/ shown instead of a screenshot crop. */
+	animation?: { src: string; width: number; height: number };
 	flip?: boolean;
 }
-const { title, alt, crop, flip = false } = Astro.props;
+const { title, alt, crop, animation, flip = false } = Astro.props;
 ---
 
 <section class:list={['feature', { flip }]}>
@@ -17,7 +19,11 @@ const { title, alt, crop, flip = false } = Astro.props;
 		<h2>{title}</h2>
 		<slot />
 	</div>
-	<Screenshot alt={alt} crop={crop} frame={false} />
+	{animation ? (
+		<img class="animation" src={animation.src} width={animation.width} height={animation.height} alt={alt} loading="lazy" />
+	) : (
+		<Screenshot alt={alt} crop={crop} frame={false} />
+	)}
 </section>
 
 <style>
@@ -39,6 +45,13 @@ const { title, alt, crop, flip = false } = Astro.props;
 		.feature.flip .text {
 			order: 2;
 		}
+	}
+.animation {
+		width: 100%;
+		height: auto;
+		border-radius: 0.75rem;
+		background: #fffdf8;
+		box-shadow: 0 1.5rem 3.5rem -1.5rem rgb(0 0 0 / 0.45), 0 0 0 1px var(--sl-color-hairline);
 	}
 	.text h2 {
 		margin-top: 0;

@@ -39,6 +39,8 @@ const { heading, items } = Astro.props;
 		}
 	}
 	.item {
+		/* Starlight spaces consecutive content blocks; not inside the grid. */
+		margin: 0 !important;
 		padding: 1.5rem;
 		border-top: 3px solid var(--sl-color-accent);
 		background: var(--sl-color-gray-6);
