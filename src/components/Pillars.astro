@@ -1,0 +1,57 @@
+---
+// Three short statements side by side, with a big heading above.
+interface Props {
+	heading: string;
+	items: { title: string; text: string }[];
+}
+const { heading, items } = Astro.props;
+---
+
+<section class="pillars">
+	<h2>{heading}</h2>
+	<div class="grid">
+		{items.map((item) => (
+			<div class="item">
+				<h3>{item.title}</h3>
+				<p>{item.text}</p>
+			</div>
+		))}
+	</div>
+</section>
+
+<style>
+	.pillars {
+		margin-block: 4rem 2rem;
+		text-align: center;
+	}
+	.pillars h2 {
+		font-size: var(--sl-text-4xl);
+	}
+	.grid {
+		display: grid;
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+		text-align: start;
+	}
+	@media (min-width: 50rem) {
+		.grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	.item {
+		/* Starlight spaces consecutive content blocks; not inside the grid. */
+		margin: 0 !important;
+		padding: 1.5rem;
+		border-top: 3px solid var(--sl-color-accent);
+		background: var(--sl-color-gray-6);
+		border-radius: 0 0 0.5rem 0.5rem;
+	}
+	.item h3 {
+		margin: 0 0 0.5rem;
+		font-size: var(--sl-text-xl);
+	}
+	.item p {
+		margin: 0;
+		color: var(--sl-color-gray-2);
+	}
+</style>

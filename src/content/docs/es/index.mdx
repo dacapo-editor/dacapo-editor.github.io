@@ -1,0 +1,62 @@
+---
+title: Editor de partituras gratuito
+description: Da Capo es un editor de partituras libre y gratuito para arreglistas y compositores. Sin pruebas, sin versión limitada, sin suscripción. Gratis, para siempre.
+template: splash
+hero:
+  title: Escribe música. Gratis, para siempre.
+  tagline: Da Capo es un editor de partituras de código abierto para arreglistas y compositores. Sin periodo de prueba, sin versión “lite”, sin suscripción — la aplicación completa, para todos, en Windows, macOS y Linux.
+  actions:
+    - text: Descargar Da Capo
+      link: /es/download/
+      icon: right-arrow
+    - text: Novedades
+      link: /es/news/
+      variant: minimal
+    - text: Código en GitHub
+      link: https://github.com/dacapo-editor/dacapo
+      icon: github
+      variant: minimal
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import Screenshot from '../../../components/Screenshot.astro';
+import Pillars from '../../../components/Pillars.astro';
+import Feature from '../../../components/Feature.astro';
+import Highlights from '../../../components/Highlights.astro';
+
+<Screenshot alt="Da Capo con una partitura de piano abierta: barra de menús, barra de herramientas, la paleta de notas a la izquierda y la partitura sobre una página impresa." />
+
+<Pillars
+	heading="Gratis de verdad"
+	items={[
+		{ title: 'Sin límites', text: 'Todos los pentagramas, voces, compases y partituras que tu música necesite. Nada se reserva para una edición de pago.' },
+		{ title: 'Sin muros de pago', text: 'No hay versión “pro”, ni prueba, ni suscripción. Cada función es para todos, hoy y en todas las versiones futuras.' },
+		{ title: 'Tuyo para siempre', text: 'Código abierto bajo la GPL. Tus archivos son tuyos, y ninguna empresa puede quitarte la aplicación ni cambiar las condiciones.' },
+	]}
+/>
+
+<Feature title="Partituras que parecen impresas" alt="Detalle de música grabada: corcheas y semicorcheas unidas por barras, puntos de staccato, un acento, una ligadura de unión y un calderón." crop={{ x: 480, y: 1060, w: 1440, h: 470 }}>
+	Cada símbolo se graba con Bravura, la fuente que usan los editores profesionales. Las barras siguen el compás, las ligaduras se curvan como deben y la vista de página muestra hojas de papel reales: lo que ves es lo que imprimes.
+</Feature>
+
+<Feature flip title="Cada herramienta, a un clic" alt="Notas escritas con el teclado: las corcheas se unen bajo una barra, las semicorcheas reciben doble barra, se forma un acorde y la primera nota se arrastra hacia arriba a otra altura." animation={{ src: '/media/typing.webp', width: 544, height: 170 }}>
+	Elige una figura y haz clic en el pentagrama, o escribe las notas con el teclado. Agarra una nota y arrástrala arriba o abajo para cambiar su altura. Apunta con la goma a una sola nota — incluso a un sonido de un acorde — o borra un pasaje entero de un barrido.
+</Feature>
+
+<Highlights
+	items={[
+		{ icon: 'seti:audio', title: 'Escúchala mientras escribes', text: 'Pulsa Espacio y tu partitura suena con instrumentos grabados. Las notas suenan al escribirlas, y las ligaduras, los staccatos y las dinámicas se tocan como están escritos.' },
+		{ icon: 'approve-check-circle', title: 'Sigue justo donde lo dejaste', text: 'Cada cambio se guarda en el disco en menos de medio segundo. Tras un cierre inesperado o un corte de luz, tu música vuelve al abrir Da Capo, con su historial de deshacer.' },
+		{ icon: 'rocket', title: 'Siempre al día', text: 'Da Capo te avisa cuando hay una versión nueva, la descarga en segundo plano y la instala al reiniciar.' },
+		{ icon: 'laptop', title: 'En tu ordenador, sin conexión', text: 'Una aplicación pequeña y rápida para Windows, macOS y Linux. Sin cuentas, sin nube, sin anuncios. Tus partituras son archivos tuyos.' },
+	]}
+/>
+
+## Recién empieza, y crece rápido
+
+Da Capo es joven. Lo siguiente en la [hoja de ruta](/es/project/roadmap/): un instrumento por pentagrama, importar y exportar MusicXML, exportar a PDF y tresillos.
+
+<CardGrid>
+	<LinkCard title="Ya está aquí Da Capo 0.2" description="Barras, una goma precisa, arrastrar notas, actualizaciones automáticas y los primeros instaladores." href="/es/news/da-capo-0-2/" />
+	<LinkCard title="Ayuda a que siga siendo gratis" description="Da Capo lo hacen músicos para músicos. Descubre cómo puedes apoyarlo." href="/es/support/" />
+</CardGrid>

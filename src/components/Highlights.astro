@@ -1,0 +1,57 @@
+---
+// A grid of short highlights, each with an icon.
+import { Icon } from '@astrojs/starlight/components';
+import type { ComponentProps } from 'astro/types';
+
+interface Props {
+	items: { icon: ComponentProps<typeof Icon>['name']; title: string; text: string }[];
+}
+const { items } = Astro.props;
+---
+
+<div class="highlights">
+	{items.map((item) => (
+		<div class="item">
+			<Icon name={item.icon} size="1.75rem" class="icon" />
+			<div>
+				<h3>{item.title}</h3>
+				<p>{item.text}</p>
+			</div>
+		</div>
+	))}
+</div>
+
+<style>
+	.highlights {
+		display: grid;
+		gap: 2rem 3rem;
+		margin-block: 3rem;
+	}
+	@media (min-width: 50rem) {
+		.highlights {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	.item {
+		margin: 0 !important;
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+	.item :global(.icon) {
+		flex: none;
+		padding: 0.6rem;
+		border-radius: 0.6rem;
+		color: var(--sl-color-accent-high);
+		background: var(--sl-color-accent-low);
+		box-sizing: content-box;
+	}
+	h3 {
+		margin: 0 0 0.35rem;
+		font-size: var(--sl-text-xl);
+	}
+	p {
+		margin: 0;
+		color: var(--sl-color-gray-2);
+	}
+</style>

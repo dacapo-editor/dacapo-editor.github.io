@@ -1,43 +1,69 @@
 ---
 title: Download
-description: Get Da Capo for Windows, macOS or Linux.
+description: Download Da Capo for Windows, macOS or Linux. Free, forever.
 ---
 
-import { Aside, LinkButton, Steps } from '@astrojs/starlight/components';
+import { Aside, Card, Steps } from '@astrojs/starlight/components';
+import Downloads from '../../components/Downloads.astro';
 
-<Aside type="caution" title="No release yet">
-Da Capo is still in early development and there is no installer to download yet. Ready-made installers for Windows, macOS and Linux will be published on the GitHub Releases page.
+Da Capo is free and open source. No account, no trial, no ads.
+
+<Downloads
+	labels={{
+		windows: 'Windows 10 and 11',
+		macArm: 'macOS · Apple silicon (M1 and later)',
+		macIntel: 'macOS · Intel',
+		linux: 'Linux · AppImage',
+		version: 'Latest version: {version}',
+		all: 'All files, including .msi, .deb and .rpm, and older versions',
+		recommended: 'For your computer',
+	}}
+/>
+
+Once installed, Da Capo updates itself: it tells you when a new version is out and installs it when you restart.
+
+<Card title="System requirements" icon="laptop">
+
+| | Minimum |
+|---|---|
+| **Windows** | Windows 10 or 11, 64-bit (x64). WebView2 is part of Windows 11; on Windows 10 the installer adds it if it is missing. |
+| **macOS** | macOS 11 Big Sur or later, Apple silicon or Intel. |
+| **Linux** | 64-bit (x86_64) with WebKitGTK 4.1: Ubuntu 22.04, Debian 12, Fedora 36 or newer. |
+| **Memory** | 4 GB of RAM. |
+| **Disk** | Under 30 MB for the app, plus 150 MB for the sounds, downloaded the first time you play. |
+| **Screen** | 1280 × 720 or larger. A mouse or trackpad and a keyboard. |
+| **Internet** | Only to download the sounds once and to check for updates. Da Capo works offline. |
+
+</Card>
+
+## First start
+
+<Aside type="caution" title="Security warnings">
+The installers are not signed yet, so your system may warn you the first time:
+
+- **Windows**: if SmartScreen says “Windows protected your PC”, click **More info → Run anyway**.
+- **macOS**: if macOS says the app cannot be opened, go to **System Settings → Privacy & Security** and click **Open Anyway**.
+- **Linux**: make the AppImage executable (`chmod +x`) and run it, or install the `.deb` or `.rpm` package.
 </Aside>
 
-<LinkButton href="https://github.com/dacapo-editor/dacapo/releases" icon="github">
-	Releases on GitHub
-</LinkButton>
+**Sounds.** The first time you press Play, Da Capo offers to download its instruments (FluidR3 GM, 148 MB, once).
 
 ## Build it yourself
 
-Until the first release, you can build and run Da Capo from the source code.
+You can also build Da Capo from the source code.
 
 <Steps>
 
-1. Install [Rust](https://rustup.rs) (stable, 1.89 or newer) and the [platform dependencies for Tauri 2](https://v2.tauri.app/start/prerequisites/). On Windows that means the Microsoft C++ Build Tools; WebView2 is already part of Windows 10 and 11.
+1. Install [Rust](https://rustup.rs) (stable, 1.89 or newer) and the [platform dependencies for Tauri 2](https://v2.tauri.app/start/prerequisites/).
 
-2. Get the code:
+2. Get the code and run it:
 
    ```bash
    git clone https://github.com/dacapo-editor/dacapo.git
    cd dacapo
-   ```
-
-3. Run the app:
-
-   ```bash
    cargo run -p dacapo
    ```
 
 </Steps>
 
-Node.js is not needed. The full development setup, including how to build an installer, is described in [INSTALLATION.md](https://github.com/dacapo-editor/dacapo/blob/main/docs/INSTALLATION.md).
-
-## Sounds
-
-Playback uses the **FluidR3 GM** sound set (148 MB). It is not part of the download: Da Capo asks before fetching it the first time you press Play, and keeps it for later.
+The full development setup is described in [INSTALLATION.md](https://github.com/dacapo-editor/dacapo/blob/main/docs/INSTALLATION.md).

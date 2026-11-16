@@ -1,0 +1,69 @@
+---
+title: Descargar
+description: Descarga Da Capo para Windows, macOS o Linux. Gratis, para siempre.
+---
+
+import { Aside, Card, Steps } from '@astrojs/starlight/components';
+import Downloads from '../../../components/Downloads.astro';
+
+Da Capo es gratis y de código abierto. Sin cuentas, sin pruebas, sin anuncios.
+
+<Downloads
+	labels={{
+		windows: 'Windows 10 y 11',
+		macArm: 'macOS · Apple silicon (M1 y posteriores)',
+		macIntel: 'macOS · Intel',
+		linux: 'Linux · AppImage',
+		version: 'Última versión: {version}',
+		all: 'Todos los archivos, incluidos .msi, .deb y .rpm, y las versiones anteriores',
+		recommended: 'Para tu ordenador',
+	}}
+/>
+
+Una vez instalado, Da Capo se actualiza solo: te avisa cuando hay una versión nueva y la instala al reiniciar.
+
+<Card title="Requisitos del sistema" icon="laptop">
+
+| | Mínimo |
+|---|---|
+| **Windows** | Windows 10 u 11 de 64 bits (x64). WebView2 viene con Windows 11; en Windows 10 el instalador lo añade si falta. |
+| **macOS** | macOS 11 Big Sur o posterior, Apple silicon o Intel. |
+| **Linux** | 64 bits (x86_64) con WebKitGTK 4.1: Ubuntu 22.04, Debian 12, Fedora 36 o posteriores. |
+| **Memoria** | 4 GB de RAM. |
+| **Disco** | Menos de 30 MB para la aplicación, más 150 MB para los sonidos, que se descargan la primera vez que reproduces. |
+| **Pantalla** | 1280 × 720 o mayor. Ratón o trackpad, y teclado. |
+| **Internet** | Solo para descargar los sonidos una vez y buscar actualizaciones. Da Capo funciona sin conexión. |
+
+</Card>
+
+## Primer arranque
+
+<Aside type="caution" title="Avisos de seguridad">
+Los instaladores aún no están firmados, así que tu sistema puede avisarte la primera vez:
+
+- **Windows**: si SmartScreen dice “Windows protegió tu PC”, pulsa **Más información → Ejecutar de todas formas**.
+- **macOS**: si macOS dice que la aplicación no se puede abrir, ve a **Ajustes del Sistema → Privacidad y seguridad** y pulsa **Abrir igualmente**.
+- **Linux**: haz ejecutable el AppImage (`chmod +x`) y ábrelo, o instala el paquete `.deb` o `.rpm`.
+</Aside>
+
+**Sonidos.** La primera vez que pulses Reproducir, Da Capo ofrece descargar sus instrumentos (FluidR3 GM, 148 MB, una sola vez).
+
+## Compílalo tú mismo
+
+También puedes compilar Da Capo desde el código fuente.
+
+<Steps>
+
+1. Instala [Rust](https://rustup.rs) (estable, 1.89 o posterior) y las [dependencias de Tauri 2 para tu sistema](https://v2.tauri.app/start/prerequisites/).
+
+2. Descarga el código y ejecútalo:
+
+   ```bash
+   git clone https://github.com/dacapo-editor/dacapo.git
+   cd dacapo
+   cargo run -p dacapo
+   ```
+
+</Steps>
+
+La preparación completa del entorno está en [INSTALLATION.md](https://github.com/dacapo-editor/dacapo/blob/main/docs/INSTALLATION.md) (en inglés).

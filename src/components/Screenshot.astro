@@ -1,0 +1,70 @@
+---
+// The app in a window frame. Shows the light or dark screenshot to match
+// the site theme. `crop` shows only a rectangle of it, in pixels of the
+// 2880×1800 screenshots: { x, y, w, h }.
+import { Image } from 'astro:assets';
+import light from '../assets/screens/app-light.png';
+import dark from '../assets/screens/app-dark.png';
+
+interface Props {
+	alt: string;
+	crop?: { x: number; y: number; w: number; h: number };
+	frame?: boolean;
+}
+const { alt, crop, frame = true } = Astro.props;
+const W = light.width;
+const style = crop
+	? `aspect-ratio:${crop.w} / ${crop.h};--w:${(W / crop.w) * 100}%;--l:${(-crop.x / crop.w) * 100}%;--t:${(-crop.y / crop.h) * 100}%`
+	: undefined;
+const imageProps = { alt, widths: [720, 1440, 2880], sizes: '(min-width: 72rem) 68rem, 100vw' };
+---
+
+<figure class:list={['shot', { framed: frame }]}>
+	{frame && (
+		<div class="bar" aria-hidden="true">
+			<span /><span /><span />
+		</div>
+	)}
+	<div class:list={['view', { cropped: !!crop }]} style={style}>
+		<Image src={light} {...imageProps} class="only-light" loading={crop ? 'lazy' : 'eager'} />
+		<Image src={dark} {...imageProps} class="only-dark" loading="lazy" />
+	</div>
+</figure>
+
+<style>
+	.shot {
+		margin: 0;
+		border-radius: 0.75rem;
+		overflow: hidden;
+		background: var(--sl-color-gray-6);
+		box-shadow: 0 1.5rem 3.5rem -1.5rem rgb(0 0 0 / 0.45), 0 0 0 1px var(--sl-color-hairline);
+	}
+	.bar {
+		display: flex;
+		gap: 0.4rem;
+		padding: 0.6rem 0.8rem;
+		background: var(--sl-color-gray-5);
+	}
+	.bar span {
+		width: 0.7rem;
+		height: 0.7rem;
+		border-radius: 50%;
+		background: var(--sl-color-gray-4);
+	}
+	.view img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	.cropped {
+		position: relative;
+		overflow: hidden;
+	}
+	.cropped img {
+		position: absolute;
+		max-width: none;
+		width: var(--w);
+		left: var(--l);
+		top: var(--t);
+	}
+</style>
