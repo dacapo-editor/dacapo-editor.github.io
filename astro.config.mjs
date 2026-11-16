@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightBlog from 'starlight-blog';
 
 const repo = 'https://github.com/dacapo-editor/dacapo';
 
@@ -11,7 +12,7 @@ export default defineConfig({
 		starlight({
 			title: 'Da Capo',
 			description:
-				'Da Capo is a free, open source music notation editor that feels like a word processor.',
+				'Da Capo is a free, open source music notation editor for arrangers and composers. Free, forever.',
 			logo: { src: './src/assets/logo.png', alt: '' },
 			favicon: '/favicon.png',
 			customCss: ['./src/styles/custom.css'],
@@ -20,10 +21,27 @@ export default defineConfig({
 				baseUrl: 'https://github.com/dacapo-editor/dacapo-editor.github.io/edit/main/',
 			},
 			lastUpdated: true,
+			// English at the root, Spanish under /es/. Pages not translated yet
+			// fall back to English with a notice.
+			defaultLocale: 'root',
+			locales: {
+				root: { label: 'English', lang: 'en' },
+				es: { label: 'Español', lang: 'es' },
+			},
+			plugins: [
+				starlightBlog({
+					prefix: 'news',
+					title: { en: 'News', es: 'Noticias' },
+					authors: {
+						team: { name: 'The Da Capo team', url: repo },
+					},
+				}),
+			],
 			sidebar: [
-				{ label: 'Download', slug: 'download' },
+				{ label: 'Download', translations: { es: 'Descargar' }, slug: 'download' },
 				{
 					label: 'User guide',
+					translations: { es: 'Guía de uso' },
 					items: [
 						{ slug: 'guide/basics' },
 						{ slug: 'guide/entering-music' },
@@ -34,13 +52,14 @@ export default defineConfig({
 				},
 				{
 					label: 'Project',
+					translations: { es: 'Proyecto' },
 					items: [
 						{ slug: 'project/roadmap' },
 						{ slug: 'project/contributing' },
 						{ slug: 'project/credits' },
 					],
 				},
-				{ label: 'Support Da Capo', slug: 'support' },
+				{ label: 'Support Da Capo', translations: { es: 'Apoya Da Capo' }, slug: 'support' },
 			],
 		}),
 	],

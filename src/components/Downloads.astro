@@ -1,0 +1,130 @@
+---
+// Download buttons for the latest release. Without JavaScript (or if the
+// GitHub API is unreachable) they open the latest release page; a small
+// script then points each one at its file and shows the version.
+interface Props {
+	labels: {
+		windows: string;
+		macArm: string;
+		macIntel: string;
+		linux: string;
+		version: string; // "{version}" is replaced
+		all: string;
+		recommended: string;
+	};
+}
+const { labels } = Astro.props;
+const latest = 'https://github.com/dacapo-editor/dacapo/releases/latest';
+const items = [
+	{ os: 'windows', label: labels.windows, match: '_x64-setup.exe', icon: 'seti:windows' },
+	{ os: 'mac-arm', label: labels.macArm, match: '_aarch64.dmg', icon: 'apple' },
+	{ os: 'mac-intel', label: labels.macIntel, match: '_x64.dmg', icon: 'apple' },
+	{ os: 'linux', label: labels.linux, match: '.AppImage', icon: 'linux' },
+];
+---
+
+<div class="downloads" data-version-label={labels.version} data-recommended={labels.recommended}>
+	<p class="version" hidden></p>
+	<div class="grid">
+		{items.map((item) => (
+			<a class="dl" href={latest} data-os={item.os} data-match={item.match}>
+				<span class="name">{item.label}</span>
+				<span class="file"></span>
+			</a>
+		))}
+	</div>
+	<p class="all"><a href={latest}>{labels.all}</a></p>
+</div>
+
+<script>
+	const box = document.querySelector<HTMLElement>('.downloads');
+	if (box) {
+		// Highlight the visitor's system.
+		const ua = navigator.userAgent;
+		const os = /Windows/.test(ua) ? 'windows' : /Mac/.test(ua) ? 'mac-arm' : /Linux/.test(ua) ? 'linux' : null;
+		const mine = os && box.querySelector<HTMLElement>(`[data-os="${os}"]`);
+		if (mine) {
+			mine.classList.add('mine');
+			mine.dataset.badge = box.dataset.recommended ?? '';
+		}
+		fetch('https://api.github.com/repos/dacapo-editor/dacapo/releases/latest')
+			.then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+			.then((release) => {
+				const version = String(release.tag_name).replace(/^v/, '');
+				const label = box.querySelector<HTMLElement>('.version');
+				if (label) {
+					label.textContent = (box.dataset.versionLabel ?? '').replace('{version}', version);
+					label.hidden = false;
+				}
+				for (const a of box.querySelectorAll<HTMLAnchorElement>('a.dl')) {
+					const asset = release.assets.find((x: { name: string }) => x.name.endsWith(a.dataset.match ?? '\0'));
+					if (!asset) continue;
+					a.href = asset.browser_download_url;
+					const file = a.querySelector('.file');
+					if (file) file.textContent = `${asset.name} · ${(asset.size / 1e6).toFixed(1)} MB`;
+				}
+			})
+			.catch(() => {});
+	}
+</script>
+
+<style>
+	.downloads {
+		margin-block: 1.5rem;
+	}
+	.version {
+		font-weight: 600;
+		color: var(--sl-color-accent-high);
+	}
+	.grid {
+		display: grid;
+		gap: 0.75rem;
+	}
+	@media (min-width: 40rem) {
+		.grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	.dl {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+		padding: 1rem 1.25rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.6rem;
+		text-decoration: none;
+		color: var(--sl-color-white);
+		background: var(--sl-color-gray-6);
+	}
+	.dl:hover {
+		border-color: var(--sl-color-accent);
+	}
+	.dl.mine {
+		border-color: var(--sl-color-accent);
+		background: var(--sl-color-accent-low);
+	}
+	.dl.mine::after {
+		content: attr(data-badge);
+		position: absolute;
+		top: 0.6rem;
+		inset-inline-end: 0.8rem;
+		font-size: var(--sl-text-xs);
+		font-weight: 600;
+		color: var(--sl-color-accent-high);
+	}
+	.name {
+		font-weight: 600;
+		font-size: var(--sl-text-lg);
+	}
+	.file {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.file:empty {
+		display: none;
+	}
+	.all {
+		margin-top: 1rem;
+	}
+</style>

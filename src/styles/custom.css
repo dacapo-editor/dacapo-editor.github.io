@@ -18,3 +18,9 @@
 	border-radius: 22%;
 	box-shadow: 0 1.5rem 3rem -1rem rgb(0 0 0 / 0.35);
 }
+
+/* Images that exist in a light and a dark version (see Screenshot.astro). */
+:root[data-theme='light'] .only-dark,
+:root[data-theme='dark'] .only-light {
+	display: none !important;
+}
