@@ -40,6 +40,7 @@ export default defineConfig({
 						{ slug: 'project/credits' },
 					],
 				},
+				{ label: 'Support Da Capo', slug: 'support' },
 			],
 		}),
 	],
