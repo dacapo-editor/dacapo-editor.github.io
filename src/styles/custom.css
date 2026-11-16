@@ -1,0 +1,20 @@
+/* Accent colors taken from the Da Capo app icon (navy blue). */
+
+/* Dark mode */
+:root {
+	--sl-color-accent-low: #1a2150;
+	--sl-color-accent: #5468d4;
+	--sl-color-accent-high: #c9d0f5;
+}
+
+/* Light mode */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #d6dbf6;
+	--sl-color-accent: #2b3b8f;
+	--sl-color-accent-high: #1a2358;
+}
+
+.hero img {
+	border-radius: 22%;
+	box-shadow: 0 1.5rem 3rem -1rem rgb(0 0 0 / 0.35);
+}

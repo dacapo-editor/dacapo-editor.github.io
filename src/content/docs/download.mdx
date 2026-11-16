@@ -1,0 +1,43 @@
+---
+title: Download
+description: Get Da Capo for Windows, macOS or Linux.
+---
+
+import { Aside, LinkButton, Steps } from '@astrojs/starlight/components';
+
+<Aside type="caution" title="No release yet">
+Da Capo is still in early development and there is no installer to download yet. Ready-made installers for Windows, macOS and Linux will be published on the GitHub Releases page.
+</Aside>
+
+<LinkButton href="https://github.com/dacapo-editor/dacapo/releases" icon="github">
+	Releases on GitHub
+</LinkButton>
+
+## Build it yourself
+
+Until the first release, you can build and run Da Capo from the source code.
+
+<Steps>
+
+1. Install [Rust](https://rustup.rs) (stable, 1.89 or newer) and the [platform dependencies for Tauri 2](https://v2.tauri.app/start/prerequisites/). On Windows that means the Microsoft C++ Build Tools; WebView2 is already part of Windows 10 and 11.
+
+2. Get the code:
+
+   ```bash
+   git clone https://github.com/dacapo-editor/dacapo.git
+   cd dacapo
+   ```
+
+3. Run the app:
+
+   ```bash
+   cargo run -p dacapo
+   ```
+
+</Steps>
+
+Node.js is not needed. The full development setup, including how to build an installer, is described in [INSTALLATION.md](https://github.com/dacapo-editor/dacapo/blob/main/docs/INSTALLATION.md).
+
+## Sounds
+
+Playback uses the **FluidR3 GM** sound set (148 MB). It is not part of the download: Da Capo asks before fetching it the first time you press Play, and keeps it for later.

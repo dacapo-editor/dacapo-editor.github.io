@@ -1,0 +1,61 @@
+---
+title: Free music notation editor
+description: A free, open source music notation editor that feels like a word processor.
+template: splash
+hero:
+  title: Write music the way you write text
+  tagline: Da Capo is a free, open source music notation editor. A blinking caret, Shift-selection, copy and paste, Ctrl+Z, and no lost work after a crash.
+  image:
+    file: ../../assets/logo.png
+    alt: Da Capo logo
+  actions:
+    - text: Download
+      link: /download/
+      icon: right-arrow
+    - text: Read the guide
+      link: /guide/basics/
+      variant: minimal
+    - text: Source on GitHub
+      link: https://github.com/dacapo-editor/dacapo
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card title="Edits like a word processor" icon="pencil">
+		Type notes with the keyboard or place them with the mouse. Select across
+		staves, cut, copy and paste, and undo whole runs of typing in one step.
+	</Card>
+	<Card title="Never lose your work" icon="approve-check">
+		Every change is written to a recovery journal within half a second. After
+		a crash or a power cut, Da Capo offers your music back, undo history
+		included.
+	</Card>
+	<Card title="Hear what you write" icon="seti:audio">
+		Playback with real recorded instruments (FluidR3 GM). Ties, articulations,
+		slurs and dynamics shape the sound, and notes play as you enter them.
+	</Card>
+	<Card title="Looks like printed music" icon="document">
+		Engraved with the Bravura music font. Page view shows real sheets of
+		paper, and what you see is what prints.
+	</Card>
+	<Card title="Light and fast" icon="rocket">
+		Built with Rust and Tauri. A small download that starts quickly on
+		Windows, macOS and Linux.
+	</Card>
+	<Card title="Free and open" icon="open-book">
+		Licensed under the GPL 3.0 or later. Inspired by the classic notation
+		editors of the 1990s, such as Encore, and built from scratch.
+	</Card>
+</CardGrid>
+
+## Early days
+
+Da Capo is in early development. The core editing, crash recovery and playback work today. Beaming, tuplets, MusicXML and PDF export are on the way.
+
+<CardGrid>
+	<LinkCard title="Roadmap" description="What works now and what comes next." href="/project/roadmap/" />
+	<LinkCard title="Contribute" description="Report a problem, suggest a feature or send code." href="/project/contributing/" />
+</CardGrid>
