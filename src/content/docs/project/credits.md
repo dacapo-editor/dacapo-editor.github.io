@@ -17,7 +17,7 @@ Partita is free software under the [GNU GPL 3.0 or later](https://www.gnu.org/li
 | [ureq](https://github.com/algesten/ureq) | Downloading the SoundFont | Martin Algesten and contributors | MIT or Apache-2.0 |
 | [serde](https://serde.rs), postcard, crc32fast | Saving files and crash-recovery data | Their respective authors | MIT or Apache-2.0 |
 
-A *partita* is a Baroque suite of pieces, like Bach's partitas for solo violin. Up to version 0.2.2 the project was called Partita. The project is inspired by the classic notation editors of the 1990s, such as Encore.
+A *partita* is a Baroque suite of pieces, like Bach's partitas for solo violin. Up to version 0.2.2 the project was called Da Capo. The project is inspired by the classic notation editors of the 1990s, such as Encore.
 
 The manuscript behind the home page is Bach's own copy of the Preludio of his Partita No. 3 for solo violin, BWV 1006 (1720), in the public domain, digitised by [Bach digital](https://www.bach-digital.de) and shared on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:BWV1006_preludio_autograph_manuscript_1720.jpeg).
 

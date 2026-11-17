@@ -2,7 +2,7 @@
 title: Keyboard shortcuts
 description: Every Partita keyboard shortcut on one page.
 sidebar:
-  order: 5
+  order: 6
 ---
 
 In the app, **Help → Keyboard Shortcuts** (F1) shows this list too.

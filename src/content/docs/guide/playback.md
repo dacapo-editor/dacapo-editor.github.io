@@ -2,7 +2,7 @@
 title: Playback
 description: Listen to your score, set the tempo and learn how the music is played.
 sidebar:
-  order: 4
+  order: 5
 ---
 
 | Control | Action |
@@ -25,4 +25,5 @@ The file is kept in the app's data folder. On Windows that is `%LOCALAPPDATA%\io
 - **Ties** sustain the note, including across barlines.
 - **Staccato** plays half the value and **staccatissimo** a quarter. **Tenuto**, **slurs** and tied notes are played full length. Other notes play slightly detached.
 - **Dynamics** set the loudness from that note on. **sfz** affects only its note, and **fp** plays forte then piano. **Accents** and **marcato** add emphasis.
-- Every staff plays piano for now. Choosing an instrument per staff is on the [roadmap](/project/roadmap/).
+- **Each staff plays its own instrument**, chosen in its [staff settings](/guide/staves/). Notes you enter sound with it too.
+- **Transposing instruments** play at concert pitch: a written D on a B♭ clarinet sounds C.

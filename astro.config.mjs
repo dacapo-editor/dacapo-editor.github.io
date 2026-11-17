@@ -47,6 +47,7 @@ export default defineConfig({
 						{ slug: 'guide/basics' },
 						{ slug: 'guide/entering-music' },
 						{ slug: 'guide/editing' },
+						{ slug: 'guide/staves' },
 						{ slug: 'guide/playback' },
 						{ slug: 'guide/shortcuts' },
 					],
