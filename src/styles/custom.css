@@ -92,6 +92,48 @@ h3,
 	filter: drop-shadow(0 1rem 1.5rem var(--partita-paper-edge));
 }
 
+/*
+ * Behind the home hero: Bach's own manuscript of the Preludio of his
+ * Partita No. 3 for solo violin, BWV 1006 (1720, public domain, from
+ * Wikimedia Commons / Bach digital). Only the ink is kept, tinted for the
+ * theme and faded at the edges, so it reads as texture, not as content.
+ */
+[data-has-hero] .hero {
+	position: relative;
+	isolation: isolate;
+}
+[data-has-hero] .hero::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	inset: -3rem 0 -1rem;
+	background: var(--partita-manuscript);
+	opacity: var(--partita-manuscript-opacity);
+	pointer-events: none;
+	-webkit-mask-image: url('/media/bach-bwv1006-preludio.webp'),
+		linear-gradient(to bottom, transparent, #000 20%, #000 55%, transparent),
+		linear-gradient(to right, transparent, #000 25%, #000 75%, transparent);
+	-webkit-mask-size: min(64rem, 120%) auto, 100% 100%, 100% 100%;
+	-webkit-mask-position: 60% 0, 0 0, 0 0;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-composite: source-in;
+	mask-image: url('/media/bach-bwv1006-preludio.webp'),
+		linear-gradient(to bottom, transparent, #000 20%, #000 55%, transparent),
+		linear-gradient(to right, transparent, #000 25%, #000 75%, transparent);
+	mask-size: min(64rem, 120%) auto, 100% 100%, 100% 100%;
+	mask-position: 60% 0, 0 0, 0 0;
+	mask-repeat: no-repeat;
+	mask-composite: intersect;
+}
+:root {
+	--partita-manuscript: #c8954a;
+	--partita-manuscript-opacity: 0.13;
+}
+:root[data-theme='light'] {
+	--partita-manuscript: #6b4226;
+	--partita-manuscript-opacity: 0.12;
+}
+
 /* Less room between the home hero and the screenshot below it. */
 [data-has-hero] .hero {
 	padding-block-end: 1rem;

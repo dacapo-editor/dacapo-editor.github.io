@@ -19,4 +19,6 @@ Partita is free software under the [GNU GPL 3.0 or later](https://www.gnu.org/li
 
 A *partita* is a Baroque suite of pieces, like Bach's partitas for solo violin. Up to version 0.2.2 the project was called Partita. The project is inspired by the classic notation editors of the 1990s, such as Encore.
 
+The manuscript behind the home page is Bach's own copy of the Preludio of his Partita No. 3 for solo violin, BWV 1006 (1720), in the public domain, digitised by [Bach digital](https://www.bach-digital.de) and shared on [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:BWV1006_preludio_autograph_manuscript_1720.jpeg).
+
 This website is built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
