@@ -1,11 +1,11 @@
 ---
 title: Roadmap
-description: What Da Capo can do today and what comes next.
+description: What Partita can do today and what comes next.
 sidebar:
   order: 1
 ---
 
-Da Capo is in early development. This page summarizes the plan; the detailed, always up-to-date list lives in [ROADMAP.md](https://github.com/dacapo-editor/dacapo/blob/main/docs/ROADMAP.md) on GitHub.
+Partita is in early development. This page summarizes the plan; the detailed, always up-to-date list lives in [ROADMAP.md](https://github.com/partita-notation/partita/blob/main/docs/ROADMAP.md) on GitHub.
 
 ## Works today
 

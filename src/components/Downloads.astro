@@ -14,7 +14,7 @@ interface Props {
 	};
 }
 const { labels } = Astro.props;
-const latest = 'https://github.com/dacapo-editor/dacapo/releases/latest';
+const latest = 'https://github.com/partita-notation/partita/releases/latest';
 const items = [
 	{ os: 'windows', label: labels.windows, match: '_x64-setup.exe', icon: 'seti:windows' },
 	{ os: 'mac-arm', label: labels.macArm, match: '_aarch64.dmg', icon: 'apple' },
@@ -47,7 +47,7 @@ const items = [
 			mine.classList.add('mine');
 			mine.dataset.badge = box.dataset.recommended ?? '';
 		}
-		fetch('https://api.github.com/repos/dacapo-editor/dacapo/releases/latest')
+		fetch('https://api.github.com/repos/partita-notation/partita/releases/latest')
 			.then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
 			.then((release) => {
 				const version = String(release.tag_name).replace(/^v/, '');

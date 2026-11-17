@@ -3,22 +3,23 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightBlog from 'starlight-blog';
 
-const repo = 'https://github.com/dacapo-editor/dacapo';
+const repo = 'https://github.com/partita-notation/partita';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://dacapo-editor.github.io',
+	site: 'https://partita-notation.github.io',
 	integrations: [
 		starlight({
-			title: 'Da Capo',
+			title: 'Partita',
 			description:
-				'Da Capo is a free, open source music notation editor for arrangers and composers. Free, forever.',
+				'Partita is a free, open source music notation editor for arrangers and composers. Free, forever.',
 			logo: { src: './src/assets/logo.png', alt: '' },
 			favicon: '/favicon.png',
 			customCss: ['./src/styles/custom.css'],
+			components: { Head: './src/components/Head.astro' },
 			social: [{ icon: 'github', label: 'GitHub', href: repo }],
 			editLink: {
-				baseUrl: 'https://github.com/dacapo-editor/dacapo-editor.github.io/edit/main/',
+				baseUrl: 'https://github.com/partita-notation/partita-notation.github.io/edit/main/',
 			},
 			lastUpdated: true,
 			// English at the root, Spanish under /es/. Pages not translated yet
@@ -33,7 +34,7 @@ export default defineConfig({
 					prefix: 'news',
 					title: { en: 'News', es: 'Noticias' },
 					authors: {
-						team: { name: 'The Da Capo team', url: repo },
+						team: { name: 'The Partita team', url: repo },
 					},
 				}),
 			],
@@ -59,7 +60,7 @@ export default defineConfig({
 						{ slug: 'project/credits' },
 					],
 				},
-				{ label: 'Support Da Capo', translations: { es: 'Apoya Da Capo' }, slug: 'support' },
+				{ label: 'Support Partita', translations: { es: 'Apoya Partita' }, slug: 'support' },
 			],
 		}),
 	],
