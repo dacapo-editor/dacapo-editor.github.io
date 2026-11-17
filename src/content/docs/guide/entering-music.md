@@ -18,7 +18,7 @@ The **palette** on the left holds the tools for entering music.
 
 ## The palette
 
-The palette is grouped into collapsible categories. Click a heading to open or close it; Da Capo remembers your choice. Hover any button, or reach it with Tab, to see its name, what it does and its keyboard shortcut.
+The palette is grouped into collapsible categories. Click a heading to open or close it; Partita remembers your choice. Hover any button, or reach it with Tab, to see its name, what it does and its keyboard shortcut.
 
 Marks (accidentals, ties, articulations, dynamics) apply to **the note just before the caret**, or to **every note in the selection**. Clicking the same mark again removes it.
 

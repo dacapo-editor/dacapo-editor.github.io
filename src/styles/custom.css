@@ -1,22 +1,95 @@
-/* Accent colors taken from the Da Capo app icon (navy blue). */
+/*
+ * Partita's look: an old engraved score in a modern layout. Warm parchment
+ * and walnut, ink-brown text and a little gold; Fraunces for headings,
+ * Inter for reading. The Baroque is in the details, the layout stays plain.
+ */
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/inter';
 
-/* Dark mode */
+/* Dark mode: walnut. */
 :root {
-	--sl-color-accent-low: #1a2150;
-	--sl-color-accent: #5468d4;
-	--sl-color-accent-high: #c9d0f5;
+	--sl-font: 'Inter Variable';
+	--partita-serif: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+
+	--sl-color-white: #f4ecdd;
+	--sl-color-gray-1: #e8dcc8;
+	--sl-color-gray-2: #cdbca4;
+	--sl-color-gray-3: #a08d76;
+	--sl-color-gray-4: #6a5847;
+	--sl-color-gray-5: #3d3026;
+	--sl-color-gray-6: #2a211a;
+	--sl-color-black: #1d1612;
+
+	--sl-color-accent-low: #3b2a17;
+	--sl-color-accent: #c8954a;
+	--sl-color-accent-high: #f1d49a;
+
+	--partita-gold: #c8954a;
+	--partita-paper-edge: rgb(0 0 0 / 0.35);
 }
 
-/* Light mode */
+/* Light mode: parchment and ink. */
 :root[data-theme='light'] {
-	--sl-color-accent-low: #d6dbf6;
-	--sl-color-accent: #2b3b8f;
-	--sl-color-accent-high: #1a2358;
+	--sl-color-white: #1d1612;
+	--sl-color-gray-1: #2b2118;
+	--sl-color-gray-2: #45372b;
+	--sl-color-gray-3: #6e5c4a;
+	--sl-color-gray-4: #a08d76;
+	--sl-color-gray-5: #d8c9b2;
+	--sl-color-gray-6: #ece2d0;
+	--sl-color-gray-7: #f1e8d8;
+	--sl-color-black: #f8f3e9;
+
+	--sl-color-accent-low: #ead8be;
+	--sl-color-accent: #6b4226;
+	--sl-color-accent-high: #3e2614;
+
+	--partita-gold: #a87a35;
+	--partita-paper-edge: rgb(60 40 20 / 0.18);
 }
 
+/* Headings in the engraved-book serif. */
+h1,
+h2,
+h3,
+.site-title,
+.hero h1,
+.sl-markdown-content :is(h1, h2, h3) {
+	font-family: var(--partita-serif);
+	font-optical-sizing: auto;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+.site-title {
+	font-size: var(--sl-text-2xl);
+	color: var(--sl-color-white);
+}
+.hero h1 {
+	font-weight: 700;
+}
+
+/* A fleuron between sections on the home page: the one Baroque flourish. */
+.partita-fleuron {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin: 3.5rem auto 0;
+	max-width: 22rem;
+	color: var(--partita-gold);
+	font-size: 1.4rem;
+	line-height: 1;
+}
+.partita-fleuron::before,
+.partita-fleuron::after {
+	content: '';
+	flex: 1;
+	border-top: 1px solid currentColor;
+	opacity: 0.6;
+}
+
+/* The logo letter in the hero, without the rounded square around it. */
 .hero img {
-	border-radius: 22%;
-	box-shadow: 0 1.5rem 3rem -1rem rgb(0 0 0 / 0.35);
+	filter: drop-shadow(0 1rem 1.5rem var(--partita-paper-edge));
 }
 
 /* Less room between the home hero and the screenshot below it. */

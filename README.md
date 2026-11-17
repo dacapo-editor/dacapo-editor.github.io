@@ -1,6 +1,6 @@
-# Da Capo website
+# Partita website
 
-Source of **https://dacapo-editor.github.io**, the website of [Da Capo](https://github.com/dacapo-editor/dacapo), the open source music notation editor.
+Source of **https://partita-notation.github.io**, the website of [Partita](https://github.com/partita-notation/partita), the open source music notation editor.
 
 Built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build). Every push to `main` is built and published to GitHub Pages by `.github/workflows/deploy.yml`.
 

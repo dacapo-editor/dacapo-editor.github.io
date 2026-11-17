@@ -16,9 +16,9 @@ A green line follows the music, and the view scrolls to keep it in sight. Notes 
 
 ## Sounds
 
-Playback uses **FluidR3 GM**, a free set of recorded instruments by Frank Wen (MIT license). The first time you press Play, Da Capo asks before downloading it (148 MB, once). Progress shows in the status bar, and playback starts by itself when it is ready.
+Playback uses **FluidR3 GM**, a free set of recorded instruments by Frank Wen (MIT license). The first time you press Play, Partita asks before downloading it (148 MB, once). Progress shows in the status bar, and playback starts by itself when it is ready.
 
-The file is kept in the app's data folder. On Windows that is `%LOCALAPPDATA%\io.github.dacapo-editor.dacapo\soundfonts\`.
+The file is kept in the app's data folder. On Windows that is `%LOCALAPPDATA%\io.github.partita-notation.partita\soundfonts\`.
 
 ## How the score is played
 

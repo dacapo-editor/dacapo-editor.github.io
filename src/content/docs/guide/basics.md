@@ -5,12 +5,12 @@ sidebar:
   order: 1
 ---
 
-Da Capo is designed to feel like a word processor whose "text" is music. A blinking caret marks where the next note goes. You can select with Shift or the mouse, cut, copy and paste, and undo with Ctrl+Z.
+Partita is designed to feel like a word processor whose "text" is music. A blinking caret marks where the next note goes. You can select with Shift or the mouse, cut, copy and paste, and undo with Ctrl+Z.
 
 ## Documents
 
 - **New** (Ctrl+N) opens a new tab with an empty 8-measure score.
-- **Open** (Ctrl+O) loads a `.dacapo` file.
+- **Open** (Ctrl+O) loads a `.partita` file (or a `.dacapo` file saved before the project was renamed).
 - **Save** (Ctrl+S) saves the document. **Save As** is Ctrl+Shift+S.
 - **Close tab** is Ctrl+W, and **next/previous tab** is Ctrl+Tab and Ctrl+Shift+Tab.
 - Edit the **title** and **composer** directly on the page.
@@ -26,7 +26,7 @@ The menu bar has **File**, **Edit**, **View**, **Insert**, **Play** and **Help**
 - **Keyboard Shortcuts** (F1), the full list of shortcuts.
 - **What's New**, which opens the changelog.
 - **Report a Problem…** and **Source Code on GitHub**, which open in your browser.
-- **Credits and Licenses** and **About Da Capo**. They show the version, the components Da Capo downloaded (such as FluidR3 GM) and the projects it is built on. **Copy version info** puts a short summary on the clipboard to paste into a bug report.
+- **Credits and Licenses** and **About Partita**. They show the version, the components Partita downloaded (such as FluidR3 GM) and the projects it is built on. **Copy version info** puts a short summary on the clipboard to paste into a bug report.
 
 ## Views
 
@@ -54,11 +54,11 @@ All views edit the same way.
 
 ### Printing
 
-**Print** (Ctrl+P) prints the page view in black on white, one sheet per page. Editing aids such as the caret, the selection and the error marks are left out. From another view, Da Capo switches to page view for the print and back afterwards.
+**Print** (Ctrl+P) prints the page view in black on white, one sheet per page. Editing aids such as the caret, the selection and the error marks are left out. From another view, Partita switches to page view for the print and back afterwards.
 
 ### Theme
 
-**System** (default) follows your computer's light or dark setting. **Light** or **Dark** fix it for Da Capo only.
+**System** (default) follows your computer's light or dark setting. **Light** or **Dark** fix it for Partita only.
 
 ## Crash protection
 

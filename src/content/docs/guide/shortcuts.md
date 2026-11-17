@@ -1,6 +1,6 @@
 ---
 title: Keyboard shortcuts
-description: Every Da Capo keyboard shortcut on one page.
+description: Every Partita keyboard shortcut on one page.
 sidebar:
   order: 5
 ---
