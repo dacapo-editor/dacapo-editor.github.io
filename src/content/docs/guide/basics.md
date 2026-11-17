@@ -10,7 +10,9 @@ Partita is designed to feel like a word processor whose "text" is music. A blink
 ## Documents
 
 - **New** (Ctrl+N) opens a new tab with an empty 8-measure score.
-- **Open** (Ctrl+O) loads a `.partita` file (or a `.dacapo` file saved before the project was renamed).
+- **Open** (Ctrl+O) loads a `.partita` file (or a `.dacapo` file saved before the project was renamed). It also opens MusicXML files.
+- **Import MusicXML…** (File menu) opens a score from another notation program — `.musicxml`, `.xml` or compressed `.mxl` — as a new, unsaved score. What Partita cannot show yet is simplified, and a message lists it: tuplets keep their written values, grace notes are left out, voices beyond four per staff are dropped, and each staff keeps the clef it starts with.
+- **Export MusicXML…** (File menu) saves the score for Finale, Sibelius, Dorico, MuseScore and others, with each staff's name, sound, transposition and grouping.
 - **Save** (Ctrl+S) saves the document. **Save As** is Ctrl+Shift+S.
 - **Close tab** is Ctrl+W, and **next/previous tab** is Ctrl+Tab and Ctrl+Shift+Tab.
 - Edit the **title** and **composer** directly on the page.
