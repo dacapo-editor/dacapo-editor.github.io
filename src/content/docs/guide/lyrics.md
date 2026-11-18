@@ -2,7 +2,7 @@
 title: Lyrics
 description: Write words under the notes, syllable by syllable, in up to eight verses.
 sidebar:
-  order: 6
+  order: 7
 ---
 
 Lyrics are written **under the notes**, one syllable per note, so they move, copy and paste with the music.

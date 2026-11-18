@@ -2,7 +2,7 @@
 title: Staves and instruments
 description: Name, sound, clef and transposition of each staff, short names, brackets and braces — everything to write for an ensemble or a full orchestra.
 sidebar:
-  order: 4
+  order: 5
 ---
 
 Every staff has a **name**, a **short name**, a **sound**, a **clef** and a **transposition**. Together they let you write anything from a solo to a full orchestra.
@@ -49,7 +49,7 @@ Other transpositions — clarinet in A, alto flute in G, trumpet in D or E♭ �
 - A **bracket** joins an instrument family: woodwinds, brass, strings.
 - A **brace** joins the staves of one instrument: the two hands of a piano, a harp, an organ.
 
-Select some music across the staves you want to join (drag from the top staff to the bottom one), then choose **Score → Group Staves → Bracket** or **Brace**. **Ungroup** takes them out again. Barlines run through a group, and when the staves of a brace share a name, it is printed once, centred.
+Select some music across the staves you want to join (drag from the top staff to the bottom one), then choose **Score → Staff → Group → Bracket** or **Brace**, or the buttons of the **Staves** bar. **Ungroup** takes them out again. Barlines run through a group, and when the staves of a brace share a name, it is printed once, centred.
 
 ## Scores from other programs
 

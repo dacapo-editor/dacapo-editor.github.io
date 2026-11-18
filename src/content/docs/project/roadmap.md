@@ -29,6 +29,9 @@ Partita is in early development. This page summarizes the plan; the detailed, al
 - Several documents open at once, in tabs.
 - Crash recovery that brings back unsaved work and its undo history.
 - English and Spanish interface.
+- Barline types, repeats, first and second endings, D.C., D.S., segno, coda and Fine, all followed by playback.
+- Pickup measures, and system and page breaks.
+- Thin, named toolbars around the score that can be moved anywhere, hidden, and saved as layouts.
 
 ## Coming next
 

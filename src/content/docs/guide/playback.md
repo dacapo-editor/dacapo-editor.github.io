@@ -2,7 +2,7 @@
 title: Playback
 description: Listen to your score, set the tempo and learn how the music is played.
 sidebar:
-  order: 7
+  order: 8
 ---
 
 | Control | Action |
@@ -17,6 +17,10 @@ A green line follows the music, and the view scrolls to keep it in sight. Notes 
 ## Tempo changes
 
 A [tempo marking](/guide/texts/#tempo-markings) later in the piece can change the tempo from its measure on, and playback follows it. A marking can be hidden and still set the tempo. Gradual changes (*rit.*, *accel.*) are not played yet.
+
+## Repeats and jumps
+
+Repeats are played, each ending on its own time through, and D.C., D.S., *Fine* and *To Coda* are followed; the playhead goes back with the music. See [Measures, repeats and jumps](/guide/structure/).
 
 ## Sounds
 
