@@ -2,7 +2,7 @@
 title: Titles, tempo and text
 description: Title, composer, header, footer and page numbers; tempo markings; expressions, techniques and rehearsal marks; free text boxes; and the font and size of every kind of text.
 sidebar:
-  order: 5
+  order: 6
 ---
 
 Every text in a score is part of the score: it prints as shown, it is saved in the file, and every change can be undone with Ctrl+Z. **Click any text on the page to change it there.** Type, then press **Enter** (or click elsewhere) to keep it, or **Esc** to leave it as it was.
@@ -21,7 +21,7 @@ An empty title or composer shows a grey hint where it goes. Hints are never prin
 
 ## Tempo markings
 
-**Score → Tempo Marking…**, or the **♩=** button in the palette, puts a marking such as **Andante con moto ♩ = 76** at the start of the caret's measure. Suggestions such as *Allegro* or *a tempo* appear as you type. The metronome mark can count quarters, eighths, halves or dotted values: ♩. = 60 in 6/8 is the same speed as ♩ = 90. Click a printed marking to change or remove it.
+**Score → Tempo Marking…**, or the **♩=** button of the **Indications** bar, puts a marking such as **Andante con moto ♩ = 76** at the start of the caret's measure. Suggestions such as *Allegro* or *a tempo* appear as you type. The metronome mark can count quarters, eighths, halves or dotted values: ♩. = 60 in 6/8 is the same speed as ♩ = 90. Click a printed marking to change or remove it.
 
 - **What prints and what plays are separate.** *Printed* chooses the words and the metronome mark, the words only, the metronome mark only, or nothing. A hidden marking still sets the tempo.
 - **Tempo changes.** A marking later in the piece with *Changes the tempo from this measure* plays at its new tempo from there on. Without it, only the words are printed (*a tempo*, *più mosso*) and the tempo stays as it was.
@@ -29,7 +29,7 @@ An empty title or composer shows a grey hint where it goes. Hints are never prin
 
 ## Words in the music
 
-The **Indications** section of the palette has the tempo marking and three more buttons. They are in the **Notes** and **Score** menus too.
+The **Indications** bar on top has the tempo marking and the rehearsal mark; the **Expressions** bar, right of the score, has the expression and the technique. They are in the **Notes** and **Score** menus too.
 
 | Button | What it adds |
 |---|---|
@@ -41,7 +41,7 @@ A grey hint shows where the words go: type over it and press **Enter**. Words on
 
 ## Text boxes
 
-The **T** tool in the palette (or **Score → Text Box**) writes anywhere on a page: click where the text should start and type. **Shift+Enter** starts a new line.
+The **T** tool of the **Tools** bar (or **Score → Text Box**) writes anywhere on a page: click where the text should start and type. **Shift+Enter** starts a new line.
 
 - A text box stays where you put it on its page, whatever the music does. That is why boxes are only shown in page view.
 - **Drag** a box to move it; **click** it to change it.

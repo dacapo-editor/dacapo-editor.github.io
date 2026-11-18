@@ -25,8 +25,8 @@ The tab of a document with unsaved changes shows a dot (●). Closing it asks wh
 |---|---|
 | **File** | New, open, save, import and export, print. |
 | **Edit** | Undo, redo, cut, copy, paste, select all. |
-| **View** | Layout, zoom, paper, theme and language. |
-| **Score** | Measures, staves and their groups; titles, tempo markings, rehearsal marks, text boxes and text styles. |
+| **View** | Layout, zoom, paper, toolbars and their layouts, theme and language. |
+| **Score** | Measures (barlines, repeats, endings, length, breaks), staves and their groups; titles, tempo markings, rehearsal marks, jumps, text boxes and text styles. |
 | **Notes** | Ties, slurs, lyrics, expressions and techniques; accidentals, articulations and dynamics. |
 | **Play** | Play, pause and stop. |
 | **Help** | Shortcuts, what's new, updates and credits. |

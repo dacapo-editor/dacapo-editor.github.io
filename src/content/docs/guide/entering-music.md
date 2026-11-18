@@ -1,6 +1,6 @@
 ---
 title: Entering music
-description: Place notes with the mouse or type them with the keyboard, drag notes to a new pitch, erase, and use the palette.
+description: Place notes with the mouse or type them with the keyboard, drag notes to a new pitch, erase, and use the bars around the score.
 sidebar:
   order: 2
 ---
@@ -9,9 +9,9 @@ You can enter music with the mouse, with the keyboard, or mixing both.
 
 ## With the mouse
 
-The **palette** on the left holds the tools for entering music.
+The bars **left of the score** hold what you write with; the ones **right of it**, what goes on the notes.
 
-1. Click a figure in the palette. The pointer turns into that figure.
+1. Click a figure (or a rest, beside it) in the **Figures** bar. The pointer turns into that figure.
 2. Move over a staff. The figure snaps to the nearest line or space and shows the pitch name (for example `F♯4`). A dashed line marks where it will be inserted.
 3. Click to place it. Notes you place one after another undo together with a single Ctrl+Z.
 4. Click **on an existing note** (the label shows `+`) to add the pitch to its chord. Clicking on a rest turns it into a note.
@@ -22,26 +22,32 @@ With the **Select** tool, point at a notehead: the pointer becomes a vertical do
 
 ### Erasing
 
-The **eraser** (next to Select, or `X`) turns the pointer into a crosshair. Click a note to erase just that note; in a chord, only the tone you aim at goes. Drag a box to erase everything inside it. The note under the crosshair turns red before you click, and one Ctrl+Z brings back everything erased in one go.
+The **eraser** (in the **Tools** bar, next to Select, or `X`) turns the pointer into a crosshair. Click a note to erase just that note; in a chord, only the tone you aim at goes. Drag a box to erase everything inside it. The note under the crosshair turns red before you click, and one Ctrl+Z brings back everything erased in one go.
 
-## The palette
+## The bars
 
-The palette is grouped into collapsible categories. Click a heading to open or close it; Partita remembers your choice. Hover any button, or reach it with Tab, to see its name, what it does and its keyboard shortcut.
+The tools sit in thin, named bars around the score. Hover any button, or reach it with Tab, to see its name, what it does, its keyboard shortcut and, small in the corner, the bar it belongs to. When a row or column has no room, its last bars go behind **»**.
 
-| Category | Contents |
-|---|---|
-| **Top row** | **Select** (click to place the caret, drag to select), the **eraser** and the **T** tool for [text boxes](/guide/texts/#text-boxes). **Esc**, a right-click or `N` go back to Select. |
-| **Figures** | **Notes \| Rests** switches between notes and their matching rests. **• Dot** makes the figure dotted. **View → Breve and 128th Notes** adds the breve, the 64th and the 128th. |
-| **Accidentals** | ♯ ♭ ♮. The key signature's sharps and flats are applied automatically when you place a note. |
-| **Ties & slurs** | **Tie** (`T`) joins a note to the next one of the same pitch. **Slur** (`S`) draws a phrase mark over the selected notes. |
-| **Articulations** | Staccato, staccatissimo, tenuto, accent, marcato, fermata. The fermata also works on rests. |
-| **Dynamics** | ppp … fff, sfz, fp. Printed below the staff. |
-| **Indications** | Tempo markings, expressions (*dolce*), techniques (*pizz.*) and rehearsal marks. See [Titles, tempo and text](/guide/texts/#words-in-the-music). |
-| **Voice** | **+ Voice** adds an independent line on the same staff, for example divisi strings or two melodies in one hand. Switch voices with its buttons or `Alt+1`…`4`. |
+| Bar | Where | Contents |
+|---|---|---|
+| **Tools** | top, second row | **Select** (click to place the caret, drag to select), the **eraser** and the **T** tool for [text boxes](/guide/texts/#text-boxes). **Esc**, a right-click or `N` go back to Select. |
+| **Figures** | left | Two columns: each note, and beside it its rest. The **dot** below makes the figure dotted. **View → Breve and 128th Notes** adds the breve, the 64th and the 128th. |
+| **Accidentals** | left | ♯ ♭ ♮. The key signature's sharps and flats are applied automatically when you place a note. |
+| **Voice** | left | **1** until you need more; **+** adds an independent line on the same staff, for example divisi strings or two melodies in one hand. Switch voices with its buttons or `Alt+1`…`4`. |
+| **Ties & slurs** | right | **Tie** (`T`) joins a note to the next one of the same pitch. **Slur** (`S`) draws a phrase mark over the selected notes. |
+| **Articulations** | right | Staccato, staccatissimo, tenuto, accent, marcato, fermata. The fermata also works on rests. |
+| **Dynamics** | right | ppp … fff, sfz, fp, behind one button that shows the last one chosen: click it to open all of them. Printed below the staff. |
+| **Expressions** | right | *dolce* and *pizz.*: see [Titles, tempo and text](/guide/texts/#words-in-the-music). |
+
+The rows on top hold **File**, **Edit**, **Playback** and **View**, then **Tools**, **Measure** (see [Measures, repeats and jumps](/guide/structure/)), **Staves** and **Indications**.
+
+### Your own arrangement
+
+Every bar can go where it suits you: drag it by the dotted grip at its start to another place, or onto the dashed strip at the edge of a side to start a new row or column there; **Esc** cancels. **View → Toolbars → Show Bars** hides or shows each one, **Save Layout As…** keeps an arrangement under a name, and **Reset Toolbars** brings back Partita's.
 
 ### Placing marks
 
-**Accidentals, articulations and dynamics** can be placed with the mouse: click the mark in the palette (it stays highlighted and follows the pointer), then click each note it goes on. An accidental clicked on a chord changes only that tone. **Esc**, a right-click or clicking the mark again puts it down.
+**Accidentals, articulations and dynamics** can be placed with the mouse: click the mark (it stays highlighted and follows the pointer), then click each note it goes on. An accidental clicked on a chord changes only that tone. **Esc**, a right-click or clicking the mark again puts it down.
 
 With a selection, a mark goes on every note in the selection at once. From the keyboard, and from the **Notes** menu, marks go on **the note just before the caret**. Choosing a mark a note already has removes it.
 
@@ -64,12 +70,7 @@ With a selection, a mark goes on every note in the selection at once. From the k
 
 ## Score structure
 
-The top toolbar sets the structure of the score:
-
-- **Clef**: clef of the staff containing the caret.
-- **Key** and **Time**: apply from the caret's measure until the next change. For Time, type something like `3/4` and press Enter.
-- **+ Measure / − Measure**: insert after, or delete, the current measure.
-- **+ Staff / − Staff**: add a staff at the bottom, or delete the current staff.
+The **Measure** bar sets the clef, key and time, adds and deletes measures, and holds barlines, repeats, endings and breaks: see [Measures, repeats and jumps](/guide/structure/). The **Staves** bar adds and deletes staves and groups them.
 
 ## Beams
 
