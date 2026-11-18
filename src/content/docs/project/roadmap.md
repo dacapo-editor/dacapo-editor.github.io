@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-Partita is in early development. This page summarizes the plan; the detailed, always up-to-date list lives in [ROADMAP.md](https://github.com/partita-notation/partita/blob/main/docs/ROADMAP.md) on GitHub.
+Partita is in early development: the project started on November 16, 2026, under the name Da Capo. This page summarizes the plan; the detailed, always up-to-date list lives in [ROADMAP.md](https://github.com/partita-notation/partita/blob/main/docs/ROADMAP.md) on GitHub.
 
 ## Works today
 
