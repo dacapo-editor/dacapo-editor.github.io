@@ -2,7 +2,7 @@
 title: Playback
 description: Listen to your score, set the tempo and learn how the music is played.
 sidebar:
-  order: 5
+  order: 7
 ---
 
 | Control | Action |
@@ -10,9 +10,13 @@ sidebar:
 | **Space** or ▶ | Play from the caret. Press again to pause: the caret moves to where the music stopped, so the next Play continues from there. |
 | **Shift + Space** or ⏮ | Play from the beginning. |
 | **Esc** or ⏹ | Stop without moving the caret. |
-| **♩ = 100** in the toolbar | Tempo in quarter notes per minute (20–400). Type a value and press Enter. It is saved with the score. |
+| **♩ = 100** in the toolbar | The opening tempo in quarter notes per minute (20–400). Type a value and press Enter. It is saved with the score. |
 
 A green line follows the music, and the view scrolls to keep it in sight. Notes also **sound while you write them**: placing a note, adding to a chord, or changing a pitch or accidental plays it.
+
+## Tempo changes
+
+A [tempo marking](/guide/texts/#tempo-markings) later in the piece can change the tempo from its measure on, and playback follows it. A marking can be hidden and still set the tempo. Gradual changes (*rit.*, *accel.*) are not played yet.
 
 ## Sounds
 

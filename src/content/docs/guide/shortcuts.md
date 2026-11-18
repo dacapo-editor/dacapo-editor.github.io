@@ -2,7 +2,7 @@
 title: Keyboard shortcuts
 description: Every Partita keyboard shortcut on one page.
 sidebar:
-  order: 6
+  order: 8
 ---
 
 In the app, **Help → Keyboard Shortcuts** (F1) shows this list too.
@@ -28,13 +28,35 @@ In the app, **Help → Keyboard Shortcuts** (F1) shows this list too.
 | `Shift` + `A`–`G` | Add a note to the previous chord |
 | `R` or `0` | Insert a rest |
 | `1`…`7` | Note value: 64th … whole |
+| `8` / `9` | Breve / 128th (View → Breve and 128th Notes) |
 | `.` | Toggle a dot |
 | `+` / `-` | Raise / lower the accidental |
 | `Alt` + `↑` / `↓` | Move the note one step |
 | `Ctrl` + `Alt` + `↑` / `↓` | Move the note one octave |
 | `Alt` + `1`…`4` | Switch voice |
 | `T` / `S` | Tie / slur |
-| `N` or `Esc` | Leave mouse entry mode |
+| `Ctrl` + `E` | Expression under the note (*dolce*) |
+| `X` | Eraser on / off |
+| `N` or `Esc` | Back to the Select tool |
+
+## Lyrics
+
+| Keys | Action |
+|---|---|
+| `Ctrl` + `L` | Write lyrics under the note at the caret (again to finish) |
+| `Space` | Next note |
+| `-` | Next note, joined with a hyphen |
+| `_` | Hold the syllable (extender line) |
+| `↓` / `↑` | Next / previous verse |
+| `Esc` or `Enter` | Finish |
+
+## Texts
+
+| Keys | Action |
+|---|---|
+| `Enter` | Keep the text |
+| `Shift` + `Enter` | New line (text boxes) |
+| `Esc` | Leave the text as it was |
 
 ## Moving and selecting
 
