@@ -9,11 +9,11 @@ Every staff has a **name**, a **short name**, a **sound**, a **clef** and a **tr
 
 ## Adding a staff
 
-**Insert → Staff…** adds a staff at the bottom and asks for its instrument first. Pick the sound and Partita proposes the rest: the usual name, short name, clef and transposition. Repeat it to build your ensemble.
+**Score → Staff → Add…** adds a staff at the bottom and asks for its instrument first. Pick the sound and Partita proposes the rest: the usual name, short name, clef and transposition. Keyboards, the harp and the organ come on **two braced staves** (treble and bass) in one step. Repeat it to build your ensemble.
 
 ## Changing a staff
 
-**Click the name** at the start of a staff, or use **Insert → Staff Name, Sound and Clef…** for the staff with the caret. Everything you change in that dialog is one undo step.
+**Click the name** at the start of a staff, or use **Score → Staff → Name, Sound and Clef…** for the staff with the caret. Everything you change in that dialog is one undo step.
 
 | Setting | What it does |
 |---|---|
@@ -22,6 +22,8 @@ Every staff has a **name**, a **short name**, a **sound**, a **clef** and a **tr
 | **Sound** | One of the 128 General MIDI instruments of FluidR3 GM, grouped by family. Playback and the notes you enter use it. |
 | **Clef** | Treble, bass, alto or tenor. The sound proposes the usual one (viola: alto, cello: bass). |
 | **Transposition** | For instruments that sound in another key than written (see below). |
+
+**To make a staff a piano** (or a harp or organ), open it and choose the sound: *Staves* proposes two braced staves, and the bass staff is added below. Name, sound and transposition then apply to both staves, and each keeps its clef. To have one staff again, delete the other.
 
 ## Transposing instruments
 
@@ -47,7 +49,7 @@ Other transpositions — clarinet in A, alto flute in G, trumpet in D or E♭ �
 - A **bracket** joins an instrument family: woodwinds, brass, strings.
 - A **brace** joins the staves of one instrument: the two hands of a piano, a harp, an organ.
 
-Select some music across the staves you want to join (drag from the top staff to the bottom one), then choose **Insert → Bracket Selected Staves** or **Brace Selected Staves**. **Remove Bracket or Brace** takes them out again. Barlines run through a group, and when the staves of a brace share a name, it is printed once, centred.
+Select some music across the staves you want to join (drag from the top staff to the bottom one), then choose **Score → Group Staves → Bracket** or **Brace**. **Ungroup** takes them out again. Barlines run through a group, and when the staves of a brace share a name, it is printed once, centred.
 
 ## Scores from other programs
 

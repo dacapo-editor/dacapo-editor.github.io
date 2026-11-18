@@ -21,20 +21,24 @@ Partita is in early development. This page summarizes the plan; the detailed, al
 - Transposing instruments (B♭ clarinet and trumpet, F horn, saxophones…), written in their own key.
 - Brackets and braces for instrument families and multi-staff instruments.
 - Lyrics, up to eight verses.
+- Titles, subtitle, composer, lyricist, dedication, copyright, header, footer and page numbers.
+- Tempo markings (printed or hidden) and tempo changes that playback follows.
+- Expressions, techniques and rehearsal marks.
+- Free text boxes anywhere on a page, and the font, size, bold and italic of every kind of text.
 - MusicXML import and export (`.musicxml`, `.xml`, `.mxl`).
 - Several documents open at once, in tabs.
 - Crash recovery that brings back unsaved work and its undo history.
+- English and Spanish interface.
 
 ## Coming next
 
-- **Notation**: tuplets, grace notes, clef changes, hairpins, tempo marks and text.
-- **Workflow**: a new score wizard with ensemble templates (string quartet, band, orchestra), insert and overwrite modes, and a note property panel.
-- **Orchestra**: a concert-pitch view, nested brackets, and part extraction.
-- **Formats**: PDF export and recent files.
-- **Sound**: volume and pan per staff, metronome and count-in, MIDI keyboard input.
-- **Interface**: customizable shortcuts and a Spanish translation.
+- **Notation**: tuplets, grace notes, clef changes, hairpins, glissandos, and gradual tempo changes (*rit.*, *accel.*).
+- **Writing faster**: a new score wizard with ensemble templates, insert and overwrite modes, box selection, and a panel with the properties of the selected note.
+- **Pages and parts**: PDF export, staff size and page margins per score, a concert-pitch view, and parts for each player.
+- **Sound**: volume and pan per staff, metronome and count-in, and a MIDI keyboard to enter notes.
 
 ## Further ahead
 
+- **Notation for every instrument**: percussion (drum kit notation and its sounds), guitar and bass (tablature, bends, slides, hammer-ons, chord diagrams), chord symbols, and the special marks other instruments need. Each will have its own tools, gathered so they are at hand only when that staff needs them.
 - **Version history**: go back to earlier states of a score, for example how it looked yesterday.
-- Chord symbols and guitar tablature.
+- Customizable keyboard shortcuts and other music fonts.
